@@ -1,0 +1,20 @@
+name: Gera Versão do Ecommerce
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+
+      - name: Deploy no Gcloud
+        uses: appleboy/ssh-action@v0.1.7
+        with: 
+          host: 35.247.242.144
+          username: kaue.almeida
+          key: ${{ secrets.GCLOUD_KEY }}
+          script: whoami
