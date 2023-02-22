@@ -1,4 +1,4 @@
-name: Gera Versão do Ecommerce
+name: Acessa GCLOUD
 
 on:
   push:
